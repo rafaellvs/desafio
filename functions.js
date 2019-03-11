@@ -1,4 +1,4 @@
-    //json mocado
+    //json mockado
     let ditoJson = {"events":[{"event":"comprou-produto","timestamp":"2016-09-22T13:57:32.2311892-03:00","custom_data":[{"key":"product_name","value":"Camisa Azul"},{"key":"transaction_id","value":"3029384"},{"key":"product_price","value":100}]},{"event":"comprou","timestamp":"2016-09-22T13:57:31.2311892-03:00","revenue":250,"custom_data":[{"key":"store_name","value":"Patio Savassi"},{"key":"transaction_id","value":"3029384"}]},{"event":"comprou-produto","timestamp":"2016-09-22T13:57:33.2311892-03:00","custom_data":[{"key":"product_price","value":150},{"key":"transaction_id","value":"3029384"},{"key":"product_name","value":"Calça Rosa"}]},{"event":"comprou-produto","timestamp":"2016-10-02T11:37:35.2300892-03:00","custom_data":[{"key":"transaction_id","value":"3409340"},{"key":"product_name","value":"Tenis Preto"},{"key":"product_price","value":120}]},{"event":"comprou","timestamp":"2016-10-02T11:37:31.2300892-03:00","revenue":120,"custom_data":[{"key":"transaction_id","value":"3409340"},{"key":"store_name","value":"BH Shopping"}]}]};
 
     //Banco dos produtos cadastrados
@@ -32,13 +32,13 @@
     ];
 
     //Banco dos eventos cadastrados    
-    let dataEventBase = [];
+    let eventsDB = [];
     
     //Cria evento e registra no banco
     function newEvent(id, str) {
         productDB.forEach((element) => {
             if(element.id == id) {
-                dataEventBase.push({
+                eventsDB.push({
                     event: str,
                     timestamp: new Date().toISOString(),
                     product: element.product,
@@ -49,10 +49,10 @@
     }
 
     //Renderiza eventos registrados no banco
-    function renderDataEventBase(){
+    function renderEventsDB(){
         let html = "<br/>";
 
-        dataEventBase.forEach((element) => {
+        eventsDB.forEach((element) => {
             html += "<p>";
             let keys = Object.keys(element);
 
@@ -78,7 +78,7 @@
             
             if(inputData.length >= 2) {
                 var flag = false;
-                dataEventBase.forEach((element) => {
+                eventsDB.forEach((element) => {
                     if(inputData == element.event.slice(0, inputData.length)){
                         flag = true;
                         if(!html.includes(element.timestamp)){ //renderiza apenas se o elemento ainda não tiver sido renderizado
