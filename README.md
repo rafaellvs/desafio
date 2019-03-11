@@ -1,6 +1,6 @@
 # desafio-dito
 
-Página pro desafio em html, css, js e bootstrap.
+Página pro desafio em html, css, bootstrap e js.
 
 # Descrição
 
