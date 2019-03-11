@@ -45,5 +45,7 @@ Renderiza a timeline numa div logo abaixo do botão. Quebra cada objeto e exibe 
 # Notas
 
 Não sei se o resultado final está como o esperado. Acredito também que, usando um banco de dados de verdade, as buscas devem ser mais fáceis e eficientes. O que mais me deu trabalho foi quebrar o json. Foi meu primeiro contato real com o formato. O aprendizado foi massa e qualquer feedback é apreciado :)
+
 Abraços,
+
 Rafael
