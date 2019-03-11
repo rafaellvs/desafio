@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio Dito</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        #preço {
+            text-align: right;
+        }
+    </style>
+
+    <script src="functions.js"></script>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Desafio Dito</h1>
+        <h2>Página Teste</h2>
+    </div>
+
+    <div>
+        <table cellspacing="15" style="border-collapse: initial" align="center">
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>
+
+            <tr>
+                <td>Óculos</td>
+                <td id="preço">400,00</td>
+                <td><button id=0 onclick="newEvent(id, 'viu-produto')" type="button" class="btn btn-primary">Ver produto</button></td>
+                <td><button id=0 onclick="newEvent(id, 'add-produto')" type="button" class="btn btn-info">Adicionar ao carrinho</button></td>
+                <td><button id=0 onclick="newEvent(id, 'comprou-produto')" type="button" class="btn btn-success">Comprar</button></td>
+            </tr>
+
+            <tr>
+                <td>Camisa</td>
+                <td id="preço">100,00</td>
+                <td><button id=1 onclick="newEvent(id, 'viu-produto')" type="button" class="btn btn-primary">Ver produto</button></td>
+                <td><button id=1 onclick="newEvent(id, 'add-produto')" type="button" class="btn btn-info">Adicionar ao carrinho</button></td>
+                <td><button id=1 onclick="newEvent(id, 'comprou-produto')" type="button" class="btn btn-success">Comprar</button></td>
+            </tr>
+
+            <tr>
+                <td>Calça</td>
+                <td id="preço">120,00</td>
+                <td><button id=2 onclick="newEvent(id, 'viu-produto')" type="button" class="btn btn-primary">Ver produto</button></td>
+                <td><button id=2 onclick="newEvent(id, 'add-produto')" type="button" class="btn btn-info">Adicionar ao carrinho</button></td>
+                <td><button id=2 onclick="newEvent(id, 'comprou-produto')" type="button" class="btn btn-success">Comprar</button></td>
+            </tr>
+
+            <tr>
+                <td>Meias</td>
+                <td id="preço">30,00</td>
+                <td><button id=3 onclick="newEvent(id, 'viu-produto')" type="button" class="btn btn-primary">Ver produto</button></td>
+                <td><button id=3 onclick="newEvent(id, 'add-produto')" type="button" class="btn btn-info">Adicionar ao carrinho</button></td>
+                <td><button id=3 onclick="newEvent(id, 'comprou-produto')" type="button" class="btn btn-success">Comprar</button></td>
+            </tr>
+
+            <tr>
+                <td>Tênis</td>
+                <td id="preço">180,00</td>
+                <td><button id=4 onclick="newEvent(id, 'viu-produto')" type="button" class="btn btn-primary">Ver produto</button></td>
+                <td><button id=4 onclick="newEvent(id, 'add-produto')" type="button" class="btn btn-info">Adicionar ao carrinho</button></td>
+                <td><button id=4 onclick="newEvent(id, 'comprou-produto')" type="button" class="btn btn-success">Comprar</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-3 offset-1">
+                <button onclick="renderDataEventBase()" type="button" class="btn btn-success">dataEventBase</button>
+                <div id="eventsDiv"></div>
+            </div>
+
+            <div class="col-3">
+                <input id="search" type="text" placeholder="Busque por evento...">
+                <div id="resultsDiv"></div>
+            </div>
+
+            <div class="col-3">
+                <button onclick="renderTimeline()" type="button" class="btn btn-success">renderDitoJson</button>
+                <div id="timelineDiv"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
