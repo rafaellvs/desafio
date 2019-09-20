@@ -1,4 +1,4 @@
-# desafio-dito
+# desafio
 
 Página pro desafio em html, css, bootstrap e js.
 
